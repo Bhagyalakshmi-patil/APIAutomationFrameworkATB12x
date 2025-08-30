@@ -1,4 +1,6 @@
-package com.thetestingacademy.ex_07_Payload_management.Class.Tools.responsePojos;
+package com.thetestingacademy.pojos.responsePOJO;
+
+import com.thetestingacademy.pojos.requestPOJO.BookingDates;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -9,7 +11,7 @@ public class BookingResponse {
     private String lastname;
     private Integer totalprice;
     private Boolean depositpaid;
-    private Bookingdates bookingdates;
+    private BookingDates bookingdates;
     private String additionalneeds;
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
@@ -45,11 +47,11 @@ public class BookingResponse {
         this.depositpaid = depositpaid;
     }
 
-    public Bookingdates getBookingdates() {
+    public BookingDates getBookingdates() {
         return bookingdates;
     }
 
-    public void setBookingdates(Bookingdates bookingdates) {
+    public void setBookingdates(BookingDates bookingdates) {
         this.bookingdates = bookingdates;
     }
 
