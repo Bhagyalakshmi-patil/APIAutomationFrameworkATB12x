@@ -1,17 +1,28 @@
 package com.thetestingacademy.pojos.requestPOJO;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Booking {
 
+    @SerializedName("firstname")
+    @Expose
     private String firstname;
+    @SerializedName("lastname")
+    @Expose
     private String lastname;
+    @SerializedName("totalprice")
+    @Expose
     private Integer totalprice;
+    @SerializedName("depositpaid")
+    @Expose
     private Boolean depositpaid;
+    @SerializedName("bookingdates")
+    @Expose
     private BookingDates bookingdates;
+    @SerializedName("additionalneeds")
+    @Expose
     private String additionalneeds;
-    private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     public String getFirstname() {
         return firstname;
@@ -59,14 +70,6 @@ public class Booking {
 
     public void setAdditionalneeds(String additionalneeds) {
         this.additionalneeds = additionalneeds;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }
